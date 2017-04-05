@@ -163,7 +163,7 @@ to letterTrans(txt)
                         set append_me to "S"
                     end if
                 end if
-                if ((match_me = "tango"))
+                if ((match_me = "tango") or (match_me = "tender"))
                     set matched to true
                     if (caps_on = false)
                         set append_me to "t"
@@ -246,6 +246,14 @@ to letterTrans(txt)
                 if ((match_me = "space") or (match_me = "pace") or (match_me = "place") or (match_me = "peace"))
                     set matched to true
                     set append_me to " "
+                end if
+                if ((match_me = "open"))
+                    set matched to true
+                    set append_me to "("
+                end if
+                if ((match_me = "close"))
+                    set matched to true
+                    set append_me to ")"
                 end if
                 if (matched = True)
                     set full_word to (full_word & append_me)
