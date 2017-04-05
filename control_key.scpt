@@ -219,34 +219,6 @@ to letterTrans(txt)
                         set append_me to "Z"
                     end if
                 end if
-                if ((match_me = "hit") or (match_me = "it") or (match_me = "his"))
-                    set matched to true
-                    set append_me to "-"
-                end if
-                if ((match_me = "alley") or (match_me = "Ali"))
-                    set matched to true
-                    set append_me to "_"
-                end if
-                if ((match_me = "hot") or (match_me = "heart") or (match_me = "what"))
-                    set matched to true
-                    set append_me to "."
-                end if
-                if ((match_me = "hotpot") or (match_me = "hopper"))
-                    set matched to true
-                    set append_me to ".."
-                end if
-                if ((match_me = "front"))
-                    set matched to true
-                    set append_me to "/"
-                end if
-                if ((match_me = "back") or (match_me = "that"))
-                    set matched to true
-                    set append_me to "\\"
-                end if
-                if ((match_me = "space") or (match_me = "pace") or (match_me = "place") or (match_me = "peace"))
-                    set matched to true
-                    set append_me to " "
-                end if
                 if (matched = True)
                     set full_word to (full_word & append_me)
                 end if
@@ -265,5 +237,5 @@ end letterTrans
 on srhandler(vars)
     set dictatedText to varDiddly of vars
     set full_word to letterTrans(dictatedText)
-    tell application "System Events" to keystroke full_word
+    tell application "System Events" to (keystroke full_word using control down)
 end srhandler
