@@ -1,3 +1,7 @@
+-- name command "<command name> /!Diddly!/". I name it backspace
+-- "backspace five one" will delete 51 things
+-- just "backspace" deletes one thing
+
 to numTrans(txt)
     set all_numbers to every word in txt
     set full_num to ""

@@ -1,3 +1,4 @@
+-- slightly modified from something I found online. Turns a string of words into upper camel case
 to MakeTheUpperCamel(txt)
     set txt to txt & " "
     set allWords to every word of txt

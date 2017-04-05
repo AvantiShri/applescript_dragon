@@ -1,6 +1,7 @@
 -- Name this command <command name> /!Diddly!/. I go with "mandy /!Diddly!/"
 -- Command structure is "<command name> <numerals for number of actions> <action>"
 -- Eg: "mandy one zero zero right" moves the cursor right 100 times
+-- "mandy right" moves cursor right by one
 -- Current actions are: up, down, left, right, tab, backspace
 
 to numTrans(txt)

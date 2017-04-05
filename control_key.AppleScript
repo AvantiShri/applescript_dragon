@@ -1,3 +1,7 @@
+-- for pressing a key with control held down. Esp. useful with vim.
+-- name this "<command name> /!Diddly!/". I use "crazy /!Diddly!/".
+-- eg: "crazy never" is ctrl+n
+
 to letterTrans(txt)
     set all_letters to every word in txt
     set full_word to ""
