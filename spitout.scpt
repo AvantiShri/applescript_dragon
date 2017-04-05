@@ -139,7 +139,7 @@ to letterTrans(txt)
                         set append_me to "P"
                     end if
                 end if
-                if ((match_me = "Quebec") or (match_me = "quiet") or (match_me = "queue") or (match_me = "Quentin"))
+                if ((match_me = "Quebec") or (match_me = "Q") or (match_me = "q") or (match_me = "quiet") or (match_me = "client") or (match_me = "queue") or (match_me = "Quentin"))
                     set matched to true
                     if (caps_on = false)
                         set append_me to "q"
@@ -187,7 +187,7 @@ to letterTrans(txt)
                         set append_me to "V"
                     end if
                 end if
-                if ((match_me = "whiskey") or (match_me = "wallet"))
+                if ((match_me = "whiskey") or (match_me = "wallet") or (match_me = "w") or (match_me = "W"))
                     set matched to true
                     if (caps_on = false)
                         set append_me to "w"
@@ -219,7 +219,7 @@ to letterTrans(txt)
                         set append_me to "Z"
                     end if
                 end if
-                if ((match_me = "hit") or (match_me = "it"))
+                if ((match_me = "hit") or (match_me = "it") or (match_me = "his"))
                     set matched to true
                     set append_me to "-"
                 end if
