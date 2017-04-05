@@ -11,7 +11,7 @@ to letterTrans(txt)
                 set matched to True
                 set caps_on to True
             else
-                if ((match_me = "alpha") or (match_me = "Alfa") or (match_me = "Helfer"))
+                if ((match_me = "alpha") or (match_me = "Alfa") or (match_me = "Helfer") or (match_me = "offer"))
                     set matched to true
                     if caps_on = false
                         set append_me to "a"
@@ -131,7 +131,7 @@ to letterTrans(txt)
                         set append_me to "O"
                     end if
                 end if
-                if ((match_me = "papa") or (match_me = "people") or (match_me = "police"))
+                if ((match_me = "papa") or (match_me = "Poppa") or (match_me = "people") or (match_me = "police"))
                     set matched to true
                     if (caps_on = false)
                         set append_me to "p"
