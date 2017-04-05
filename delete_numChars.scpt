@@ -121,6 +121,9 @@ end numTrans
 
 to repeatTheStuff(dictatedText)
     set numRepeat to numTrans(dictatedText)
+    if numRepeat = "" then
+        set numRepeat to "1"
+    end if
     repeat numRepeat times
         keystroke (ASCII character 8)
     end repeat

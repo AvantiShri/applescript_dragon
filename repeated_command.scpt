@@ -1,3 +1,8 @@
+-- Name this command <command name> /!Diddly!/. I go with "mandy /!Diddly!/"
+-- Command structure is "<command name> <numerals for number of actions> <action>"
+-- Eg: "mandy one zero zero right" moves the cursor right 100 times
+-- Current actions are: up, down, left, right, tab, backspace
+
 to numTrans(txt)
     set all_numbers to every word in txt
     set full_num to ""
@@ -84,6 +89,14 @@ to repeatTheStuff(dictatedText)
         end if
         if (the_keyword = "down") then
             set key_to_press_code to 125
+            set matched_keyword to True
+        end if
+        if ((the_keyword = "delete") or (the_keyword = "backspace")) then
+            set key_to_press_code to 51
+            set matched_keyword to True
+        end if
+        if ((the_keyword = "tab") or (the_keyword = "tap")) then
+            set key_to_press_code to 48
             set matched_keyword to True
         end if
         if (matched_keyword = True)
