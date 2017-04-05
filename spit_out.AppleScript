@@ -1,3 +1,16 @@
+-- Command name is "spit out /!Diddly!/"
+-- This is to spare you the annoyingness of switching in and out of spelling mode
+-- "spit out alpha upper brother delta" gives "aBd"
+-- supports various punctuations.
+-- "hot" is . (originally 'dot' but 'hot' was easier). 
+-- "hotpot" is ..
+-- "hit" is -
+-- "alley" is _
+-- "open" is (
+-- "close" is )
+-- "continue" is ,
+-- "equal" is =
+
 to letterTrans(txt)
     set all_letters to every word in txt
     set full_word to ""
