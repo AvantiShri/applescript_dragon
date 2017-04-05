@@ -1,6 +1,20 @@
 -- Name this command <command name> /!Diddly!/. I go with "super /!Diddly!/"
 -- Command structure is "<command name> <action>"
--- Current actions are: run (it runs the selected cell), new ( creates a new cell), markdown (changes cell to mark down), raw (changes cell to raw), code (changes cell to code), up (goes up one cell), down (goes down one cell), cut (cuts selected cell), copy (copies selected cell), appear (pastes cell that was copied/cut), delete (deletes selected cell), enter (allows you to enter into the selected cell to edit it), merge (merges selected cell with next cell), save (saves notebook)
+-- Current actions are: 
+-- -- run (it runs the selected cell), 
+-- -- new ( creates a new cell), 
+-- -- markdown (changes cell to mark down), 
+-- -- raw (changes cell to raw), 
+-- -- code (changes cell to code), 
+-- -- up (goes up one cell), 
+-- -- down (goes down one cell), 
+-- -- cut (cuts selected cell), 
+-- -- copy (copies selected cell), 
+-- -- appear (pastes cell that was copied/cut), 
+-- -- delete (deletes selected cell), 
+-- -- enter (allows you to enter into the selected cell to edit it), 
+-- -- merge (merges selected cell with next cell), 
+-- -- save (saves notebook)
 
 to ipythonCommands(dictatedText)
 	if (dictatedText = "run") then
@@ -49,7 +63,6 @@ to ipythonCommands(dictatedText)
 		set matched_keyword to true
 	end if
 	if (dictatedText = "appear") then
-		tell application "System Events" to keystroke "appearing"
 		tell application "System Events" to key code 53
 		tell application "System Events" to keystroke "v" using shift down
 		set matched_keyword to true
