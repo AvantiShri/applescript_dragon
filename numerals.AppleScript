@@ -1,3 +1,10 @@
+-- command name is "<command name> /!Diddly!/" eg "jeff /!Diddly!/"
+-- This is to make it easier to dictate numbers in dictation mode.
+-- Dictation mode adds spaces in odd places; this avoids that
+-- spell out all the digits - "jeff one two" gives 12
+-- Weird stuff happens if you try this in vim insert mode; use the
+-- vim-specific numerals typing that uses keycodes for that (in vim folder)
+
 to numTrans(txt)
     set all_numbers to every word in txt
     set full_num to ""
