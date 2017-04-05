@@ -131,7 +131,7 @@ to letterTrans(txt)
                         set append_me to "O"
                     end if
                 end if
-                if ((match_me = "papa") or (match_me = "Poppa") or (match_me = "people") or (match_me = "police"))
+                if ((match_me = "papa") or (match_me = "Poppa") or (match_me = "propper") or (match_me = "people") or (match_me = "police"))
                     set matched to true
                     if (caps_on = false)
                         set append_me to "p"
@@ -211,7 +211,7 @@ to letterTrans(txt)
                         set append_me to "Y"
                     end if
                 end if
-                if ((match_me = "Zulu") or (match_me = "zebra") or (match_me = "zero"))
+                if ((match_me = "Zulu") or (match_me = "zebra") or (match_me = "Zumba"))
                     set matched to true
                     if (caps_on = false)
                         set append_me to "z"
@@ -255,6 +255,55 @@ to letterTrans(txt)
                     set matched to true
                     set append_me to ")"
                 end if
+
+                if ((match_me = "one") or (match_me = "won") or (match_me = "want")) then
+                    set append_me to "1"
+                    set matched to true
+                end if
+                if ((match_me = "two") or (match_me = "till") or (match_me = "to") or (match_me = "too") or (match_me = "true")) then
+                    set append_me to "2"
+                    set matched to true
+                end if
+                if (match_me = "three") then
+                    set append_me to "3"
+                    set matched to true
+                end if
+                if ((match_me = "for") or (match_me = "four") or (match_me = "full")) then
+                    set append_me to "4"
+                    set matched to true
+                end if
+                if ((match_me = "five") or (match_me = "I")) then
+                    set append_me to "5"
+                    set matched to true
+                end if
+                if ((match_me = "six") or (match_me = "sex")) then
+                    set append_me to "6"
+                    set matched to true
+                end if
+                if (match_me = "seven") then
+                    set append_me to "7"
+                    set matched to true
+                end if
+                if ((match_me = "eight") or (match_me = "ate")) then
+                    set append_me to "8"
+                    set matched to true
+                end if
+                if (match_me = "nine") then
+                    set append_me to "9"
+                    set matched to true
+                end if
+                if ((match_me = "zero") or (match_me = "Sierra") or (match_me = "Sara") or (match_me = "Sarah")) then
+                    set append_me to (ASCII character 48)
+                    set matched to true
+                end if
+                if matched = false then
+                    try
+                        set numnum to (match_me as number)
+                        set append_me to (match_me as text)
+                        set matched to true
+                    end try
+                end if
+
                 if (matched = True)
                     set full_word to (full_word & append_me)
                 end if
