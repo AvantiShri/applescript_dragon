@@ -15,11 +15,11 @@ to slackCommands(dictatedText)
 		tell application "System Events" to key code 53
 		set matched_keyword to true
 	end if
-	if (dictatedText = "channel up") then
+	if (dictatedText = "move up") then
 		tell application "System Events" to key code 126 using {control down, option down}
 		set matched_keyword to true
 	end if
-	if (dictatedText = "channel down") then
+	if (dictatedText = "move down") then
                 tell application "System Events" to key code 125 using {control down, option down}
                 set matched_keyword to true
         end if
