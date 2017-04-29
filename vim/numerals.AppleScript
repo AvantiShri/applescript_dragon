@@ -6,6 +6,7 @@
 to numTrans(txt)
     set all_numbers to every word in txt
     set failed to false
+    set shift_down to false
     repeat with each_number in all_numbers
         set to_match to (each_number as text)
         set matched to false
@@ -50,11 +51,20 @@ to numTrans(txt)
                 set key_code to 29
                 set matched to true
             end if
+            if (to_match = "positive") then
+                set key_code to 24
+                set shift_down to True
+                set matched to true
+            end if
             if matched = false then
                 say "could not match "&to_match
                 set failed to True
             else
-                tell application "System Events" to key code key_code
+                if shift_down = True
+                    tell application "System Events" to (key code key_code using shift down)
+                else
+                    tell application "System Events" to key code key_code
+                end if
             end if
         end if
     end repeat
