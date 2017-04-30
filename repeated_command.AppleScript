@@ -85,7 +85,7 @@ to repeatTheStuff(dictatedText)
 			set key_to_press_code to 123
 			set matched_keyword to true
 		end if
-		if (the_keyword = "right") then
+		if (the_keyword = "right" or the_keyword="write") then
 			set key_to_press_code to 124
 			set matched_keyword to true
 		end if

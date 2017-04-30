@@ -6,8 +6,8 @@
 -- "hotpot" is ..
 -- "hit" is -
 -- "alley" is _
--- "open" is (
--- "close" is )
+-- "open" is (, "big open" is [
+-- "close" is ), "big open" is ]
 -- "continue" is ,
 -- "equal" is =
 -- "therefore" is :
@@ -266,11 +266,19 @@ to letterTrans(txt)
                 end if
                 if ((match_me = "open")) then
                     set matched to true
-                    set append_me to "("
+                    if (caps_on = false) then
+                        set append_me to "("
+                    else
+                        set append_me to "["
+                    end if
                 end if
                 if ((match_me = "close")) then
                     set matched to true
-                    set append_me to ")"
+                    if (caps_on = false) then
+                        set append_me to ")"
+                    else
+                        set append_me to "]"
+                    end if
                 end if
                 if ((match_me = "equal")) then
                     set matched to true

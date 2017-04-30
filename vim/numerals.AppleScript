@@ -58,6 +58,21 @@ to numTrans(txt)
                 set shift_down to True
                 set matched to true
             end if
+            if ((to_match = "alpha") or (to_match = "Alfa") or (to_match = "Helfer") or (to_match = "offer")) then
+                set keycodes_to_hit to keycodes_to_hit & {19}
+                set shift_down to True
+                set matched to true
+            end if
+            if (to_match = "carrot" or to_match="carat" or to_match="^" or to_match="roof") then
+                set keycodes_to_hit to keycodes_to_hit & {22}
+                set shift_down to True
+                set matched to true
+            end if
+            if (to_match = "dollar") then
+                set keycodes_to_hit to keycodes_to_hit & {21}
+                set shift_down to True
+                set matched to true
+            end if
             if matched = false then
                 try
                     set numnum to (to_match as number)
