@@ -1,4 +1,4 @@
--- Command name is "spit out /!Diddly!/"
+-- Command name is "spit out /!Diddly!/" (Replace spit out with your preferred command name)
 -- This is to spare you the annoyingness of switching in and out of spelling mode
 -- "spit out alpha upper brother delta" gives "aBd"
 -- supports various punctuations.
@@ -24,11 +24,12 @@ to letterTrans(txt)
         set matched to false
         set match_me to (each_letter as text)
         if failed = false then
-            if ((match_me = "big") or (match_me = "pig") or (match_me = "upper")) then
+            -- 'baby' is their due to context sensitive transcription; 'big elephant'->'baby elephant'
+            if ((match_me = "capital") or (match_me = "big") or (match_me = "baby") or (match_me = "pig") or (match_me = "bake") or (match_me = "upper")) then
                 set matched to true
                 set caps_on to true
             else
-                if ((match_me = "alpha") or (match_me = "Alfa") or (match_me = "Helfer") or (match_me = "offer")) then
+                if ((match_me = "Adrian") or (match_me = "alpha") or (match_me = "Alfa") or (match_me = "Helfer") or (match_me = "offer") or (match_me = "offered")) then
                     set matched to true
                     if caps_on = false then
                         set append_me to "a"
@@ -44,7 +45,7 @@ to letterTrans(txt)
                         set append_me to "B"
                     end if
                 end if
-                if ((match_me = "Charlie") or (match_me = "Charlie") or (match_me = "surely")) then
+                if ((match_me = "Charlie") or (match_me = "Charlie") or (match_me = "Chorley") or (match_me = "surely")) then
                     set matched to true
                     if (caps_on = false) then
                         set append_me to "c"
@@ -52,7 +53,7 @@ to letterTrans(txt)
                         set append_me to "C"
                     end if
                 end if
-                if ((match_me = "david") or (match_me = "avid") or (match_me = "delta")) then
+                if ((match_me = "david") or (match_me = "avid") or (match_me = "delta") or (match_me = "doubter") or (match_me = "doctor") or (match_me = "Dr")) then
                     set matched to true
                     if (caps_on = false) then
                         set append_me to "d"
@@ -60,7 +61,7 @@ to letterTrans(txt)
                         set append_me to "D"
                     end if
                 end if
-                if (match_me = "echo" or match_me = "elephant") then
+                if (match_me = "echo" or match_me = "eco" or match_me = "elephant") then
                     set matched to true
                     if (caps_on = false) then
                         set append_me to "e"
@@ -76,7 +77,7 @@ to letterTrans(txt)
                         set append_me to "F"
                     end if
                 end if
-                if ((match_me = "Golf") or (match_me = "Gary")) then
+                if ((match_me = "Golf") or (match_me = "cough") or (match_me = "Gary")  or (match_me = "Garey") or (match_me = "dairy") or (match_me = "Carrie")  or (match_me = "giraffe")) then
                     set matched to true
                     if (caps_on = false) then
                         set append_me to "g"
@@ -92,7 +93,7 @@ to letterTrans(txt)
                         set append_me to "H"
                     end if
                 end if
-                if ((match_me = "India") or (match_me = "Inca") or (match_me = "inker")) then
+                if ((match_me = "idiot") or (match_me = "India") or (match_me = "Inca") or (match_me = "inker")) then
                     set matched to true
                     if (caps_on = false) then
                         set append_me to "i"
@@ -100,7 +101,7 @@ to letterTrans(txt)
                         set append_me to "I"
                     end if
                 end if
-                if ((match_me = "jackal") or (match_me = "Jordan") or (match_me = "Juliette")) then
+                if ((match_me = "jackal") or (match_me = "Jordan") or (match_me = "Juliette") or (match_me = "Juliet")) then
                     set matched to true
                     if (caps_on = false) then
                         set append_me to "j"
@@ -108,7 +109,7 @@ to letterTrans(txt)
                         set append_me to "J"
                     end if
                 end if
-                if ((match_me = "kilo") or (match_me = "kappa") or (match_me = "Kevin")) then
+                if ((match_me = "kilo") or (match_me = "killer") or (match_me = "koala") or (match_me = "Kevin") or (match_me = "cabin")) then
                     set matched to true
                     if (caps_on = false) then
                         set append_me to "k"
@@ -116,7 +117,7 @@ to letterTrans(txt)
                         set append_me to "K"
                     end if
                 end if
-                if ((match_me = "Lima") or (match_me = "llama")) then
+                if ((match_me = "Lima") or (match_me = "llama") or (match_me = "lazy") or (match_me = "lacey")) then
                     set matched to true
                     if (caps_on = false) then
                         set append_me to "l"
@@ -140,7 +141,7 @@ to letterTrans(txt)
                         set append_me to "N"
                     end if
                 end if
-                if ((match_me = "Oscar") or (match_me = "omega")) then
+                if ((match_me = "Oscar") or (match_me = "oscars") or (match_me = "omega")) then
                     set matched to true
                     if (caps_on = false) then
                         set append_me to "o"
@@ -172,7 +173,7 @@ to letterTrans(txt)
                         set append_me to "R"
                     end if
                 end if
-                if ((match_me = "Sierra") or (match_me = "Sarah") or (match_me = "Sara")) then
+                if ((match_me = "stupid") or (match_me = "Sierra") or (match_me = "Sarah") or (match_me = "Sara")) then
                     set matched to true
                     if (caps_on = false) then
                         set append_me to "s"
@@ -180,7 +181,7 @@ to letterTrans(txt)
                         set append_me to "S"
                     end if
                 end if
-                if ((match_me = "tango") or (match_me = "tender")) then
+                if ((match_me = "tango") or (match_me = "tangled") or (match_me = "tangle") or (match_me = "tender")) then
                     set matched to true
                     if (caps_on = false) then
                         set append_me to "t"
@@ -196,7 +197,7 @@ to letterTrans(txt)
                         set append_me to "U"
                     end if
                 end if
-                if ((match_me = "Victor") or (match_me = "Vanessa")) then
+                if ((match_me = "Victor") or (match_me = "Vanessa")or (match_me = "picture")) then
                     set matched to true
                     if (caps_on = false) then
                         set append_me to "v"
@@ -204,7 +205,7 @@ to letterTrans(txt)
                         set append_me to "V"
                     end if
                 end if
-                if ((match_me = "whiskey") or (match_me = "wallet") or (match_me = "w") or (match_me = "W")) then
+                if ((match_me = "whiskey") or (match_me = "wierdo") or (match_me = "widow") or (match_me = "window") or (match_me = "whether") or (match_me = "w") or (match_me = "W")) then
                     set matched to true
                     if (caps_on = false) then
                         set append_me to "w"
@@ -212,7 +213,7 @@ to letterTrans(txt)
                         set append_me to "W"
                     end if
                 end if
-                if ((match_me = "x-ray") or (match_me = "x") or (match_me = "ex") or (match_me = "xerox")) then
+                if ((match_me = "x-ray") or (match_me = "x") or (match_me = "ex") or (match_me = "xerox") or (match_me = "xeroxed")) then
                     set matched to true
                     if (caps_on = false) then
                         set append_me to "x"
@@ -244,11 +245,11 @@ to letterTrans(txt)
                     set matched to true
                     set append_me to "_"
                 end if
-                if ((match_me = "hot") or (match_me = "heart") or (match_me = "what")) then
+                if ((match_me = "hot") or (match_me = "pot" ) or (match_me = "heart") or (match_me = "what")) then
                     set matched to true
                     set append_me to "."
                 end if
-                if ((match_me = "hotpot") or (match_me = "hopper")) then
+                if ((match_me = "hotpot") or (match_me = "hotspot") or (match_me = "hopper")) then
                     set matched to true
                     set append_me to ".."
                 end if
@@ -256,7 +257,7 @@ to letterTrans(txt)
                     set matched to true
                     set append_me to "/"
                 end if
-                if ((match_me = "back") or (match_me = "that")) then
+                if ((match_me = "back") or (match_me = "that") or (match_me = "tack") or (match_me = "pack")) then
                     set matched to true
                     set append_me to "\\"
                 end if
@@ -280,10 +281,6 @@ to letterTrans(txt)
                         set append_me to "]"
                     end if
                 end if
-                if ((match_me = "equal")) then
-                    set matched to true
-                    set append_me to "="
-                end if
                 if ((match_me = "continue")) then
                     set matched to true
                     set append_me to ","
@@ -304,13 +301,21 @@ to letterTrans(txt)
                     set matched to true
                     set append_me to "<"
                 end if
+                if ((match_me = "star" or match_me = "store")) then
+                    set matched to true
+                    set append_me to "*"
+                end if
+                if ((match_me = "quote" or match_me = "wrote" or match_me = "coat")) then
+                    set matched to true
+                    set append_me to "\""
+                end if
                 if (matched = true) then
                     set full_word to (full_word & append_me)
                 end if
                 set caps_on to false
             end if
             if matched = false then
-                say "could not match " & each_letter
+                say "no " & each_letter
                 set failed to true
             end if
         end if

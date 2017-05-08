@@ -23,7 +23,7 @@ to numTrans(txt)
 			set full_num to full_num & "3"
 			set matched to true
 		end if
-		if ((to_match = "for") or (to_match = "four") or (to_match = "full")) then
+		if ((to_match = "for") or (to_match = "four") or (to_match = "full") or (to_match = "phone")) then
 			set full_num to full_num & "4"
 			set matched to true
 		end if
@@ -68,6 +68,7 @@ to numTrans(txt)
 end numTrans
 
 to repeatTheStuff(dictatedText)
+	set shut_up to false
 	set return_val to numTrans(dictatedText)
 	set num_repeat to item 1 of return_val
 	if (num_repeat = "") then
@@ -77,7 +78,7 @@ to repeatTheStuff(dictatedText)
 	set hold_shift to false
 	if ((the_keyword = "") = false) then
 		set matched_keyword to false
-		if (the_keyword = "up") then
+		if (the_keyword = "up" or the_keyword = "upper") then
 			set key_to_press_code to 126
 			set matched_keyword to true
 		end if
@@ -85,11 +86,11 @@ to repeatTheStuff(dictatedText)
 			set key_to_press_code to 123
 			set matched_keyword to true
 		end if
-		if (the_keyword = "right" or the_keyword="write") then
+		if (the_keyword = "right" or the_keyword = "bright" or the_keyword = "wright" or the_keyword="write") then
 			set key_to_press_code to 124
 			set matched_keyword to true
 		end if
-		if (the_keyword = "down") then
+		if (the_keyword = "down" or the_keyword = "town") then
 			set key_to_press_code to 125
 			set matched_keyword to true
 		end if
@@ -97,7 +98,7 @@ to repeatTheStuff(dictatedText)
 			set key_to_press_code to 51
 			set matched_keyword to true
 		end if
-		if ((the_keyword = "tab") or (the_keyword = "tap")) then
+		if ((the_keyword = "tab") or (the_keyword = "tabbed") or (the_keyword = "tap") or (the_keyword = "Tam") or (the_keyword = "Tom")) then
 			set key_to_press_code to 48
 			set matched_keyword to true
 		end if
@@ -120,18 +121,17 @@ to repeatTheStuff(dictatedText)
 			end repeat
 		else
 			if (shut_up = false) then
-				say "unmatched keyword " & the_keyword
+				say "" & the_keyword
 			end if
 		end if
 	else
 		if (shut_up = false) then
-			say "missing keyword after " & num_repeat
+			say "" & num_repeat
 		end if
 	end if
 end repeatTheStuff
 
 on srhandler(vars)
-	set shut_up to false
 	set dictatedText to varDiddly of vars as text
 	repeatTheStuff(dictatedText)
 end srhandler

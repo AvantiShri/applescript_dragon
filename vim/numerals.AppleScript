@@ -25,7 +25,7 @@ to numTrans(txt)
                 set keycodes_to_hit to keycodes_to_hit & {20}
                 set matched to true
             end if
-            if ((to_match = "for") or (to_match = "four") or (to_match = "full")) then
+            if ((to_match = "for") or (to_match = "four") or (to_match = "full") or (to_match = "phone")) then
                 set keycodes_to_hit to keycodes_to_hit & {21}
                 set matched to true
             end if
@@ -56,6 +56,10 @@ to numTrans(txt)
             if (to_match = "positive") then
                 set keycodes_to_hit to keycodes_to_hit & {24}
                 set shift_down to True
+                set matched to true
+            end if
+            if (to_match = "elephant") then
+                set keycodes_to_hit to keycodes_to_hit & {24}
                 set matched to true
             end if
             if ((to_match = "alpha") or (to_match = "Alfa") or (to_match = "Helfer") or (to_match = "offer")) then
