@@ -1,4 +1,4 @@
-#snake case
+#snake case; name as "<command name> /!Variable!/"
 on srhandler(vars)
     set dictatedText to (varVariable of vars)
     set testing to do shell script "echo " & quoted form of dictatedText & " | sed \"s/ /_/g\""
